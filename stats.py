@@ -8,7 +8,8 @@ arguments = len(sys.argv) - 1
 
 def main():
     """
-    Starting point of this script. Takes a file or a list of numbers as argument, and prints median, mean and stddev
+    Starting point of this script. Takes a file or a list of numbers as command line argument, and prints median,
+    mean and stddev
     """
 
     if arguments < 1:
