@@ -1,15 +1,15 @@
 """My implementation of stats.py"""
 import os
 import sys
-import statistics  # Not available in Python 2, should be fine though right? Pls don't subtract points
+import statistics
 
 arguments = len(sys.argv) - 1
 
 
 def main():
     """
-    Starting point of this script. Takes a file or a list of numbers as command line argument, and prints median,
-    mean and stddev
+    Starting point of this script. Takes a file or a list of numbers as
+    command line argument,and prints median, mean and stddev
     """
 
     if arguments < 1:
