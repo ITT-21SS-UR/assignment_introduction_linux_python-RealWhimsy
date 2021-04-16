@@ -1,3 +1,4 @@
+#!/bin/bash
 FILE=./README # create FILE variable
 if ! [[ -f "$FILE" ]]; then # check if the file exists in the current directory
   echo "Downloading readme..."
@@ -10,7 +11,6 @@ COPY=./copy_of_readme # used as a temporary dump file to avoid reading/writing o
 
 tr '[:upper:]' '[:lower:]' < $FILE > $COPY && mv $COPY $FILE # make all text lowercase
 
-#tr --delete '\n' < $COPY
 sed -i 's/^$/ /g' $FILE # replace all linebreaks with spaces
 tr --delete '\n' < $FILE > $COPY && mv $COPY $FILE # remove all new lines. words are now only separated by spaces
 sed -i 's/ /\n/g' $FILE # replace every space with a newline. Every word is now on its own line
